@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/backend'
+      - '/usr/src/backend/node_modules'
+    ports:
+      - 8000:8000
